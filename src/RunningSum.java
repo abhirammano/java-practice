@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RunningSum {
@@ -10,13 +11,16 @@ public class RunningSum {
 
         //take each entry
         for(int i=0;i<inputSize;i++){
-            System.out.println("Enter number "+i+1+" -");
+            System.out.println("Enter number "+(i+1)+" -");
             num[i]=scanner.nextInt();
         }
         //call convertArray method and show the output to user
         RunningSum newArray=new RunningSum();
         int[] output=newArray.convertArray(num);
-        System.out.println("Running sum Array :"+output);
+        /*for(int out:output){
+            System.out.println();
+        }*/
+        System.out.println("Running sum Array :"+ Arrays.toString(output));
     }
     public int[] convertArray(int[] nums) {
         int[] out=new int[nums.length];
